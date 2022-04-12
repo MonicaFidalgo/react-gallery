@@ -4,7 +4,7 @@ import "firebase/compat/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA6H7gUtFgGH6ou1Rhx4ud3UsPoK3Pcb1w",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "gallery-gram-7403b.firebaseapp.com",
   projectId: "gallery-gram-7403b",
   storageBucket: "gallery-gram-7403b.appspot.com",
