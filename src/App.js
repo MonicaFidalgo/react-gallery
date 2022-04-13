@@ -4,6 +4,7 @@ import Home from "./Home";
 import Products from "./Products";
 import NavBar from "./NavBarComponent";
 import ProductDetail from "./ProductDetail";
+import ImageGrid from "./ImageGrid";
 
 import "./App.css";
 
@@ -16,6 +17,8 @@ function App() {
         </header>
         <Routes>
           <Route exact path="/" element={<Home />} />
+
+          <Route exact path="/images" element={<ImageGrid />} />
 
           <Route exact path="/products" element={<Products />} />
 

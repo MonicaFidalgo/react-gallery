@@ -55,6 +55,15 @@ function NavBarComponent() {
               >
                 products
               </Nav.Link>
+              <Nav.Item>
+                <Nav.Link
+                  as={Link}
+                  to="/images"
+                  onClick={() => updateExpanded(false)}
+                >
+                  Images
+                </Nav.Link>
+              </Nav.Item>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
