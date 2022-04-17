@@ -5,6 +5,7 @@ import Products from "./Products";
 import NavBar from "./NavBarComponent";
 import ProductDetail from "./ProductDetail";
 import ImageGrid from "./ImageGrid";
+import ImageDetail from "./ImageDetail";
 
 import "./App.css";
 
@@ -23,6 +24,8 @@ function App() {
           <Route exact path="/products" element={<Products />} />
 
           <Route path="/products/:productId" element={<ProductDetail />} />
+
+          <Route path="/details/:state" element={<ImageDetail />} />
         </Routes>
         {/*
               Route between 2 components depending on the path:

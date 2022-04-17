@@ -1,5 +1,6 @@
 import React from "react";
 import useFirestore from "./hooks/useFirestore";
+import { Link } from "react-router-dom";
 
 const ImageGrid = () => {
   const { docs } = useFirestore("images");
@@ -9,9 +10,10 @@ const ImageGrid = () => {
       <div className="img-grid">
         {docs &&
           docs.map((doc) => (
-            <div className="img-wrap" key={doc.id}>
+            <Link to={`/details/${doc.id}`} className="img-wrap" key={doc.id}>
+              {" "}
               <img src={doc.url} alt="firestore data" />
-            </div>
+            </Link>
           ))}
       </div>
     </div>
@@ -19,3 +21,15 @@ const ImageGrid = () => {
 };
 
 export default ImageGrid;
+
+{
+  /* <Link
+className="img-wrap"
+key={doc.id}
+to={`/details/${doc.id}`}
+state={{ url: `${doc.url}` }}
+>
+{" "}
+<img src={doc.url} alt="firestore data" />
+</Link> */
+}
