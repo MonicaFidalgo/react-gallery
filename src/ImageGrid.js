@@ -10,7 +10,12 @@ const ImageGrid = () => {
       <div className="img-grid">
         {docs &&
           docs.map((doc) => (
-            <Link to={`/details/${doc.id}`} className="img-wrap" key={doc.id}>
+            <Link
+              className="img-wrap"
+              key={doc.id}
+              to={`/details/${doc.id}`}
+              state={{ url: `${doc.url}` }}
+            >
               {" "}
               <img src={doc.url} alt="firestore data" />
             </Link>
@@ -21,15 +26,3 @@ const ImageGrid = () => {
 };
 
 export default ImageGrid;
-
-{
-  /* <Link
-className="img-wrap"
-key={doc.id}
-to={`/details/${doc.id}`}
-state={{ url: `${doc.url}` }}
->
-{" "}
-<img src={doc.url} alt="firestore data" />
-</Link> */
-}

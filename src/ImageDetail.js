@@ -1,16 +1,12 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import useFirestore from "./hooks/useFirestore";
+import { useLocation } from "react-router-dom";
 
 function ImageDetail(props) {
-  const { state } = useParams();
-  // const location = useLocation();
-  const { docs } = useFirestore("images");
-  const thisProduct = docs.find((prod) => prod.id === state);
-  console.log(thisProduct);
+  const location = useLocation();
+  console.log(location);
   return (
     <div className="img-grid">
-      {thisProduct ? <img src={thisProduct.url} /> : "Loading"}
+      {location.state ? <img src={location.state.url} /> : "Loading"}
     </div>
   );
 }
