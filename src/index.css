@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.logo {
+  max-width: 120px;
+}
+
 /* image grid styles */
 .img-grid {
   display: grid;

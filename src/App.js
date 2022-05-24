@@ -4,7 +4,7 @@ import Home from "./Home";
 import Products from "./Products";
 import NavBar from "./NavBarComponent";
 import ProductDetail from "./ProductDetail";
-import ImageGrid from "./ImageGrid";
+import ImagePage from "./pages/ImageGallery";
 import ImageDetail from "./ImageDetail";
 
 import "./App.css";
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
 
-          <Route exact path="/images" element={<ImageGrid />} />
+          <Route exact path="/images" element={<ImagePage />} />
 
           <Route exact path="/products" element={<Products />} />
 
