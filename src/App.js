@@ -2,12 +2,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
 import Home from "./Home";
 import Products from "./Products";
-import NavBar from "./NavBarComponent";
 import ProductDetail from "./ProductDetail";
 import ImagePage from "./pages/ImageGallery";
 import ImageDetail from "./ImageDetail";
-
-import "./App.css";
+import NavBar from "./components/NavbarComponent";
+import About from "./pages/About";
+import Canvas from "./pages/Canvas";
+import Exhibitions from "./pages/Exhibitions";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -26,6 +28,11 @@ function App() {
           <Route path="/products/:productId" element={<ProductDetail />} />
 
           <Route path="/details/:state" element={<ImageDetail />} />
+
+          <Route path="/about" element={<About />} />
+          <Route path="/canvas" element={<Canvas />} />
+          <Route path="/exhibitions" element={<Exhibitions />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         {/*
               Route between 2 components depending on the path:
