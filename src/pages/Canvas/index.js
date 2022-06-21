@@ -8,8 +8,6 @@ function Canvas() {
   console.log(data);
   return (
     <div>
-      <h2>Images</h2>
-
       <ImageGrid data={docs} />
     </div>
   );

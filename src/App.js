@@ -1,10 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
-import Home from "./Home";
 import Products from "./Products";
 import ProductDetail from "./ProductDetail";
-import ImagePage from "./pages/ImageGallery";
-import ImageDetail from "./ImageDetail";
+import ImageDetail from "./pages/ImageDetail";
 import NavBar from "./components/NavbarComponent";
 import About from "./pages/About";
 import Canvas from "./pages/Canvas";
@@ -19,20 +17,14 @@ function App() {
           <NavBar />
         </header>
         <Routes>
-          <Route exact path="/" element={<Home />} />
-
-          <Route exact path="/images" element={<ImagePage />} />
-
           <Route exact path="/products" element={<Products />} />
-
           <Route path="/products/:productId" element={<ProductDetail />} />
 
-          <Route path="/details/:state" element={<ImageDetail />} />
-
-          <Route path="/about" element={<About />} />
-          <Route path="/canvas" element={<Canvas />} />
+          <Route exact path="/" element={<Canvas />} />
           <Route path="/exhibitions" element={<Exhibitions />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/details/:state" element={<ImageDetail />} />
         </Routes>
         {/*
               Route between 2 components depending on the path:

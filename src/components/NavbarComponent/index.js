@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 
 function NavBarComponent() {
   const [navColour, updateNavbar] = useState(false);
@@ -31,15 +30,10 @@ function NavBarComponent() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
+          <Nav>
+            <Nav.Link href="/">Canvas</Nav.Link>
+            <Nav.Link href="/exhibitions">Exhibitions</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
-            <NavDropdown title="Artwork" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/canvas">Canvas</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="/exhibitions">
-                Exhibitions
-              </NavDropdown.Item>
-            </NavDropdown>
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
