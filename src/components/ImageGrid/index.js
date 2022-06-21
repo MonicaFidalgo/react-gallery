@@ -5,8 +5,8 @@ function ImageGrid(props) {
     <Link
       className="img-wrap"
       key={item.id}
-      to={`/details/${item.id}`}
-      state={{ url: `${item.url}`, name: `${item.title}` }}
+      to={`/details/${item.title.replace(/[%\s]/g, "")}`}
+      state={item}
     >
       {" "}
       <img src={item.url} alt="firestore data" />
