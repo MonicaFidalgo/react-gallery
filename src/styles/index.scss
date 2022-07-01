@@ -1,47 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
 @import "~bootstrap/scss/bootstrap";
+@import "variables";
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Aldrich", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 .logo {
-  max-width: 120px;
+  @include media-breakpoint-down(sm) {
+    max-width: 200px;
+  }
 }
 
-/* image grid styles */
-.img-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 300px;
-  gap: 10px;
-}
-
-.img-wrap img {
+.img-wrap {
+  position: relative;
+  display: inline-flex;
+  height: 300px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 500px;
+  }
+
+  .img__layer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  .img__description {
+    color: white;
+    transition: 1s;
+    transform: translateY(20px);
+  }
+
+  &:hover {
+    .img__description {
+      transform: translateY(0);
+    }
+    .img__layer {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }
 
-.img-wrap:first-of-type {
-  grid-column: span 2;
-  grid-row: span 2;
+.navbar {
+  .container {
+    @include media-breakpoint-up(lg) {
+      flex-direction: column;
+    }
+  }
 }
 
-.img-detail img {
-  max-width: 400px;
+$purple: #a36ff9;
+.navbar__link {
+  position: relative;
+  text-decoration: none;
+  color: #b7b7b7;
+  padding: 20px;
+
+  &.active {
+    color: $text-color;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 6px;
+      background-color: rgba($purple, 0.3);
+      width: 73%;
+      bottom: 19px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &:hover {
+    color: $text-color;
+  }
 }
 
-.logo {
-  width: 100%;
-  max-width: 140px;
+.navbar__component {
+  @include media-breakpoint-up(md) {
+    padding-top: 120px;
+  }
+}
+
+.navbar__items {
+  @include media-breakpoint-up(md) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.img-detail__img {
+  img {
+    width: 100%;
+  }
 }

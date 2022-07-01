@@ -1,19 +1,24 @@
 import { Link } from "react-router-dom";
+import { Row, Col } from "react-bootstrap";
 
 function ImageGrid(props) {
   const images = props.data.map((item) => (
-    <Link
-      className="img-wrap"
-      key={item.id}
-      to={`/details/${item.title.replace(/[%\s]/g, "")}`}
-      state={item}
-    >
-      {" "}
-      <img src={item.url} alt="firestore data" />
-    </Link>
+    <Col lg={4} md={6} sm={12} key={item.id}>
+      <Link
+        className="img-wrap"
+        to={`/details/${item.title.replace(/[%\s]/g, "")}`}
+        state={item}
+      >
+        {" "}
+        <img src={item.url} alt="firestore data" />
+        <div className="img__layer">
+          <p className="img__description">{item.title}</p>
+        </div>
+      </Link>
+    </Col>
   ));
 
-  return <div className="img-grid">{images}</div>;
+  return <Row className="img-grid">{images}</Row>;
 }
 
 export default ImageGrid;
