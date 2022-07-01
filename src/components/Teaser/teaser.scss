@@ -1,0 +1,42 @@
+.teaser__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.teaser__content {
+  max-width: 740px;
+  margin: 0 20px;
+}
+
+@media (max-width: 1200px) {
+  .teaser__content {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teaser__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .teaser__content {
+    margin-top: 30px;
+    max-width: 500px;
+  }
+
+  .teaser--right {
+    .teaser__image {
+      order: 1;
+    }
+
+    .teaser__content {
+      order: 2;
+    }
+  }
+}

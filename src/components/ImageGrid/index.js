@@ -12,7 +12,7 @@ function ImageGrid(props) {
         {" "}
         <img src={item.url} alt="firestore data" />
         <div className="img__layer">
-          <p className="img__description">{item.title}</p>
+          <h3 className="img__description">{item.title}</h3>
         </div>
       </Link>
     </Col>

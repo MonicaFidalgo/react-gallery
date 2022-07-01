@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Canvas from "./pages/Canvas";
 import Exhibitions from "./pages/Exhibitions";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/details/:state" element={<ImageDetail />} />
         </Routes>
+        <Footer />
         {/*
               Route between 2 components depending on the path:
               1. Home page ("/")
