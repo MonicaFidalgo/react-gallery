@@ -3,8 +3,9 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../../assets/logo.svg";
+import { NavLink } from "react-router-dom";
 
-function NavBarComponent() {
+function NavBarComponent(props) {
   const [navColour, updateNavbar] = useState(false);
 
   function scrollHandler() {
@@ -24,17 +25,34 @@ function NavBarComponent() {
       className={navColour ? "sticky" : "navbar__component"}
     >
       <Container>
-        <Navbar.Brand href="/">
-          {" "}
-          <img src={logo} className="logo" alt="brand" />
+        <Navbar.Brand>
+          <NavLink to="/" className="navbar__logo">
+            <img src={logo} className="logo" alt="brand" />
+          </NavLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse className="navbar__items" id="responsive-navbar-nav">
           <Nav>
-            <Nav.Link href="/">Canvas</Nav.Link>
-            <Nav.Link href="/exhibitions">Exhibitions</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/contact">Contact</Nav.Link>
+            <Nav.Item>
+              <NavLink to="/" className="navbar__link">
+                Canvas
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item>
+              <NavLink to="/exhibitions" className="navbar__link">
+                Exhibitions
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item>
+              <NavLink to="/about" className="navbar__link">
+                About
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item>
+              <NavLink to="/contact" className="navbar__link">
+                Contact
+              </NavLink>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
