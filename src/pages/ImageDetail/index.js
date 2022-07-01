@@ -18,10 +18,11 @@ function ImageDetail(props) {
     return (
       <Container className="img-detail">
         <Row>
-          <Col lg={4}>
-            {" "}
-            <h4>{location.state.name}</h4>
-            <ul>
+          <Col lg={5}>
+            <small>Canvas</small>
+            <h2>{location.state.title}</h2>
+            <hr className="title-divider" />
+            <ul className="img-detail__list">
               <li>
                 <span>{location.state?.description}</span>
               </li>
@@ -39,13 +40,13 @@ function ImageDetail(props) {
               </li>
             </ul>
           </Col>
-          <Col lg={8}>
+          <Col lg={7}>
             <div className="img-detail__img">
               <img src={location.state.url} alt="img" />
             </div>
           </Col>
         </Row>
-        <Row>{productImages}</Row>
+        <Row className="mt-5 mb-5">{productImages}</Row>
       </Container>
     );
   } else {

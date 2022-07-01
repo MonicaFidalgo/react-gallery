@@ -4,9 +4,18 @@
 @import "variables";
 
 body {
+  color: #111;
   font-family: "Aldrich", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }
 
 .logo {
@@ -112,7 +121,37 @@ $purple: #a36ff9;
 }
 
 .img-detail__img {
+  min-height: 420px;
   img {
     width: 100%;
   }
+}
+
+.img-detail__list {
+  font-family: "Arimo", sans-serif;
+  margin-top: 60px;
+  li {
+    padding-bottom: 10px;
+
+    &::before {
+      content: "•";
+      font-size: 130%;
+      line-height: 0;
+      margin: 0 0.3rem 0 -0.25rem;
+      position: relative;
+      top: 0.08rem;
+      color: red;
+    }
+  }
+}
+
+.footer {
+  background-color: #111;
+  height: 100px;
+}
+
+hr.title-divider {
+  width: 60px;
+  height: 3px;
+  color: #b7b7b7;
 }
