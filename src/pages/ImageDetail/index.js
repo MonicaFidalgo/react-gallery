@@ -2,9 +2,8 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { Row, Col, Container } from "react-bootstrap";
 
-function ImageDetail(props) {
+function ImageDetail() {
   const location = useLocation();
-  console.log(location.state);
   if (location.state) {
     const productImages = location.state.images?.map((img, index) => {
       return (

@@ -7,7 +7,7 @@ function Teaser(props) {
       <div className="teaser teaser--right">
         <div className="teaser__wrapper container">
           <div className="teaser__content">
-            <date>{props.date}</date>
+            <small>{props.date}</small>
             <h2 className="color--secondary">{props.title}</h2>
             {props.subtitle && <span>{props.subtitle}</span>}
             <p className="mt-3">{props.description}</p>
@@ -36,7 +36,7 @@ function Teaser(props) {
             />
           </div>
           <div className="teaser__content">
-            <date>{props.date}</date>
+            <small>{props.date}</small>
             <h2 className="color--secondary">{props.title}</h2>
             {props.subtitle && <span>{props.subtitle}</span>}
             <p className="mt-3">{props.description}</p>
