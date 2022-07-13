@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
 @import "~bootstrap/scss/bootstrap";
 @import "variables";
-@import "../components/NavbarComponent/navbar.scss";
+@import "../components/NavbarComponentNew/navbar.scss";
 @import "../components/Footer/footer.scss";
 
 body {
@@ -92,18 +92,15 @@ h5 {
 .img-detail__list {
   font-family: "Arimo", sans-serif;
   margin-top: 60px;
-  li {
-    padding-bottom: 10px;
 
-    &::before {
-      content: "•";
-      font-size: 130%;
-      line-height: 0;
-      margin: 0 0.3rem 0 -0.25rem;
-      position: relative;
-      top: 0.08rem;
-      color: red;
-    }
+  p {
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+
+  li {
+    padding-bottom: 5px;
   }
 }
 
@@ -120,4 +117,20 @@ hr.title-divider {
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about__img,
+.footer__banner {
+  width: 100%;
+}
+
+.about__description {
+  @include media-breakpoint-down(lg) {
+    margin-top: 50px;
+  }
 }

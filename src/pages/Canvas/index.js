@@ -5,7 +5,6 @@ import { Container } from "react-bootstrap";
 
 function Canvas() {
   const { docs } = useFirestore("images");
-  const data = useFirestore("images");
   return (
     <Container>
       <ImageGrid data={docs} />

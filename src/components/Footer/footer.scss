@@ -6,6 +6,10 @@
   color: white;
 }
 
+.footer__wrapper {
+  margin-top: 70px;
+}
+
 .footer__content {
   display: flex;
 
@@ -25,4 +29,13 @@
   .footer__copyright {
     color: $gray;
   }
+}
+
+.footer__banner {
+  background-image: url("../../assets/banner.png");
+  background-color: red;
+  height: 230px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

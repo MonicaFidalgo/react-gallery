@@ -23,18 +23,21 @@ function ImageDetail() {
             <hr className="title-divider" />
             <ul className="img-detail__list">
               <li>
+                <p>Description:</p>
                 <span>{location.state?.description}</span>
               </li>
               <li>
-                <span>{location.state?.materials}</span>
-              </li>
-              <li>
-                {" "}
+                <p>Size:</p>
                 <span>
                   {location.state?.height} x {location.state?.width} cm
                 </span>
               </li>
               <li>
+                <p>Materials:</p>
+                <span>{location.state?.materials}</span>
+              </li>
+              <li>
+                <p>Year:</p>
                 <span>{location.state?.year}</span>
               </li>
             </ul>

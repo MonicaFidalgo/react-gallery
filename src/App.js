@@ -3,7 +3,7 @@ import React from "react";
 import Products from "./Products";
 import ProductDetail from "./ProductDetail";
 import ImageDetail from "./pages/ImageDetail";
-import NavBar from "./components/NavbarComponent";
+import NavBar from "./components/NavbarComponentNew";
 import About from "./pages/About";
 import Canvas from "./pages/Canvas";
 import Exhibitions from "./pages/Exhibitions";
