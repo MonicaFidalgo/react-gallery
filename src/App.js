@@ -9,6 +9,7 @@ import Canvas from "./pages/Canvas";
 import Exhibitions from "./pages/Exhibitions";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function App() {
   return (

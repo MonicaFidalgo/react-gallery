@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
 
 function ImageGrid(props) {
+  // const getRecent = props.data.sort((a, b) => b.createdAt - a.createdAt);
+  // console.log(getRecent);
   const images = props.data.map((item) => (
     <Col lg={4} md={6} sm={12} key={item.id}>
       <Link
